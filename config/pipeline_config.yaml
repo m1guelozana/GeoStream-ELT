@@ -1,0 +1,27 @@
+pipeline:
+
+  kafka:
+
+    topic: "google_places_stream"
+
+    starting_offsets: "latest"
+
+  medallion:
+
+    bronze:
+
+      path: "./storage/bronze/google_places"
+
+    silver:
+
+      path: "./storage/silver/google_places_clean"
+
+    gold:
+
+      path: "./storage/gold/google_places_analytics"
+
+  streaming:
+
+    trigger_interval: "30 seconds"
+
+    checkpoint_location: "./checkpoints"

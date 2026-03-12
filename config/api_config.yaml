@@ -1,0 +1,24 @@
+google_places:
+
+  endpoint: "https://maps.googleapis.com/maps/api/place/nearbysearch/json"
+
+  search_parameters:
+    location: "-22.9068,-43.1729"
+    radius: 2000
+    type: "restaurant"
+
+  polling:
+
+    interval_seconds: 30
+
+    max_results: 20
+
+  locations:
+
+    rio:
+      lat: -22.9068
+      lng: -43.1729
+
+    sao_paulo:
+      lat: -23.5505
+      lng: -46.6333
